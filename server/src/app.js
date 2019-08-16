@@ -7,7 +7,9 @@ import bodyParser from "body-parser";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static("../static"));
+
+app.use(express.static("build"));
+app.use(express.static("static"));
 
 app.post("/coupon", async (req, res) => {
   const { coupon } = req.body;
