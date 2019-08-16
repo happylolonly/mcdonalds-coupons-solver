@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-import { process } from "./puppeteer";
+import { processCoupon } from "./puppeteer";
 import bodyParser from "body-parser";
 
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ app.post("/coupon", async (req, res) => {
   console.log(coupon);
 
   try {
-    const name = await process(coupon);
+    const name = await processCoupon(coupon);
 
     res.send(name).status(200);
   } catch (error) {

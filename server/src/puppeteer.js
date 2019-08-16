@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-export async function process(coupon) {
+export async function processCoupon(coupon) {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto("https://mcdonalds.fast-insight.com/voc/by/ru", {
