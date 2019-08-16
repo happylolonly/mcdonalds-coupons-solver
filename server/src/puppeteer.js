@@ -15,8 +15,8 @@ export async function processCoupon(coupon) {
   await page.click("button");
 
   await page.waitFor(2000);
-  const name = `coupon-${coupon}.png`;
-  await page.screenshot({ path: `static/coupons/${name}` });
+  const name = `coupons/coupon-${coupon}.png`;
+  await page.screenshot({ path: `static/${name}` });
   await browser.close();
 
   return name;
