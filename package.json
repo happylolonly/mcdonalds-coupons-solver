@@ -1,0 +1,19 @@
+{
+  "name": "mcdonalds-coupons-solver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happylolonly/mcdonalds-coupons-solver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happylolonly/mcdonalds-coupons-solver/issues"
+  },
+  "homepage": "https://github.com/happylolonly/mcdonalds-coupons-solver#readme"
+}
