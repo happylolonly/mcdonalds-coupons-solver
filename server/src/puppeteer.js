@@ -6,11 +6,14 @@ export async function processCoupon(coupon) {
   await page.goto("https://mcdonalds.fast-insight.com/voc/by/ru", {
     waitUntil: "networkidle2"
   });
-  // await page.type("#receiptCode", "03uu-bkn0-qfp8");
-  // await page.click("button");
 
+  // 03uu-bkn0-qfp8
+  await page.type("#receiptCode", coupon + "-test");
+  await page.click("button");
+
+  await page.waitFor(2000);
   const name = `coupon-${coupon}.png`;
-  await page.screenshot({ path: `static/${name}` });
+  await page.screenshot({ path: `static/coupons/${name}` });
   await browser.close();
 
   return name;
