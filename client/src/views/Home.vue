@@ -31,8 +31,8 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        const response = await axios.post("/coupon", { body: this.coupon });
-        this.image = `${process.env.VUE_APP_API_URL}${response.data}`;
+        const response = await axios.post("/coupon", { coupon: this.coupon });
+        this.image = `${process.env.VUE_APP_API_URL}/${response.data}`;
       } catch (error) {
         console.log(error);
       }
