@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd ./client && npm i && cd ../server && npm i",
+    "postinstall": "cd ./client && npm i && npm run build && npm run move && cd ../server && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
