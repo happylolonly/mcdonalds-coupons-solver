@@ -5,6 +5,10 @@ const app = express();
 import { processCoupon } from "./puppeteer";
 import bodyParser from "body-parser";
 
+import cors from "cors";
+
+app.use(cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
